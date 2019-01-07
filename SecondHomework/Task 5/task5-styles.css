@@ -1,0 +1,163 @@
+
+* {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    width: 99%;
+    height: 100%;
+}
+
+@media screen and (min-device-width: 1080px) {
+    .first-raw,
+    .second-raw,
+    .third-raw {
+        display: flex;
+        width: 100%;
+        padding: 0.5%;
+    }
+    .first-raw {
+        height: 10%;
+    }
+    .second-raw {
+        height: 53%;
+    }
+    .third-raw {
+        height: 30%;
+    }
+    .first-raw-item {
+        height: 100%;
+    }
+    .red-item {
+        margin-right: 1%;
+        width: 33%
+    }
+    .orange-item {
+        width: 66%;
+    }
+    .second-raw-item {
+        height: 100%;
+        width: 100%;
+    }
+    .third-raw-item {
+        height: 100%;
+        width: 33%;
+    }
+    .blue-item {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+    .first-raw,
+    .second-raw,
+    .third-raw {
+        display: flex;
+        width: 100%;
+        padding: 0.5%;
+    }
+    .first-raw {
+        height: 10%;
+    }
+    .second-raw {
+        height: 10%;
+        margin-top: 4%;
+    }
+    .third-raw {
+        height: 74%;
+        padding: 0.5%;
+        margin-top: 3%;
+    }
+    .first-raw-item {
+        height: 100%;
+    }
+    .red-item {
+        width: 100%;
+    }
+    .orange-item {
+        display: none;
+    }
+    .second-raw-item {
+        height: 100%;
+        width: 100%;
+    }
+    .third-raw-item {
+        display: none;
+        height: 100%;
+        width: 33%;
+    }
+    .blue-item {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .first-raw,
+    .second-raw,
+    .third-raw {
+        display: flex;
+        width: 100%;
+        padding: 0.5%;
+    }
+    .first-raw {
+        height: 10%;
+    }
+    .second-raw {
+        height: 53%;
+    }
+    .third-raw {
+        height: 30%;
+    }
+    .first-raw-item {
+        height: 100%;
+        border-radius: 5px;
+        margin: 1%;
+    }
+    .red-item {
+        margin-right: 1%;
+        width: 33%
+    }
+    .orange-item {
+        width: 66%;
+    }
+    .second-raw-item {
+        height: 100%;
+        width: 100%;
+        margin: 1%;
+    }
+    .third-raw-item {
+        height: 100%;
+        width: 50%;
+        margin: 1%;
+    }
+    .blue-item {
+        display: none;
+    }
+}
+
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.green {
+    background-color: green;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}

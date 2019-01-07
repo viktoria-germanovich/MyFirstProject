@@ -1,0 +1,41 @@
+* {
+    padding: 0%;
+    margin: 0;
+}
+html, body { 
+    height: 100%; 
+    }
+
+
+.first-item {
+    position: absolute;
+    z-index: 1;
+    background-color: pink;
+    width: 40%;
+    height: 40%;
+    left: 0%;
+    top: 0%;
+}
+
+.second-item {
+    position: absolute;
+    z-index: 2;
+    background-color: turquoise;
+    width: 40%;
+    height: 40%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.third-item {
+    position: absolute;
+    z-index: 1;
+    background-color: deepskyblue;
+    width: 40%;
+    height: 40%;
+    bottom: 0%;
+    right: 0%;
+}
