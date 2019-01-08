@@ -1,14 +1,45 @@
-body{
+body {
     text-align: center;
 }
-#homePage ,#flexBox {
-    color: #fff; /* цвет текста */
-    text-decoration: none; /* убирать подчёркивание у ссылок */
-    user-select: none; /* убирать выделение текста */
-    background: rgb(104, 118, 201); /* фон кнопки */
-    padding: .7em 1.5em; /* отступ от текста */
-    outline: none; /* убирать контур в Mozilla */
+
+#initialPage,
+#flexBox {
+    color: #fff;
+    text-decoration: none;
+    user-select: none;
+    background: rgb(104, 118, 201);
+    padding: .7em 1.5em;
+    outline: none;
     margin-top: 20%;
-  } 
-  #homePage:hover { background: rgb(155, 194, 209); } /* при наведении курсора мышки */
-  #flexBox:hover { background: rgb(155, 194, 209);}
+}
+
+#initialPage:hover {
+    background: rgb(155, 194, 209);
+}
+
+#flexBox:hover {
+    background: rgb(155, 194, 209);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container>div {
+    background-color: #d496c7;
+    border: 4px double black;
+    border-radius: 10px;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+}
+
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,11 +1,28 @@
+body{
+    background-color: rgb(200, 243, 239);
+}
+h1{
+    text-align: center;
+}
 .text {
     text-align: center;
     width: 800px;
     margin: auto;
+    padding: 10px;
 
 }
-
-.image {
+.image 
+{
     text-align: center;
-
 }
+p{
+    font-size: 25px;
+    text-align: center;
+}
+ul {
+    text-align: center;
+    margin: auto;
+    width: 125px;
+ }
+
+  
