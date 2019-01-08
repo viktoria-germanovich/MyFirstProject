@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+}
+#homePage ,#flexBox {
+    color: #fff; /* цвет текста */
+    text-decoration: none; /* убирать подчёркивание у ссылок */
+    user-select: none; /* убирать выделение текста */
+    background: rgb(104, 118, 201); /* фон кнопки */
+    padding: .7em 1.5em; /* отступ от текста */
+    outline: none; /* убирать контур в Mozilla */
+    margin-top: 20%;
+  } 
+  #homePage:hover { background: rgb(155, 194, 209); } /* при наведении курсора мышки */
+  #flexBox:hover { background: rgb(155, 194, 209);}
