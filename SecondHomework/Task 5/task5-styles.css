@@ -139,25 +139,25 @@
 }
 
 .red {
-    background-color: red;
+    background-color:red;
 }
 
 .orange {
-    background-color: orange;
+    background-color: rgb(240, 206, 12);
 }
 
 .green {
-    background-color: green;
+    background-color: rgb(19, 226, 19);
 }
 
 .brown {
-    background-color: brown;
+    background-color: rgb(128, 13, 13);
 }
 
 .blue {
-    background-color: blue;
+    background-color: rgb(50, 167, 221);
 }
 
 .purple {
-    background-color: purple;
+    background-color: rgb(173, 50, 173);
 }

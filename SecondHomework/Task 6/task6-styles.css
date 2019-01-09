@@ -1,0 +1,34 @@
+
+body {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1240px;
+}
+.wrapper {
+    width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	padding: 1%;
+	flex: 1 15%;
+	background-color: #FFF;
+}
+
+.item_image img {
+	width: 100%;
+}
+
+@media screen and (max-device-width: 1280px) and (max-device-height: 1024px) {
+    .item {
+		flex: 1 21%;
+	}
+    
+    .wrapper .item:nth-last-of-type(-n+2) {
+        flex: 2 46%;
+    }
+}
+
