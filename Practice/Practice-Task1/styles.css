@@ -31,7 +31,7 @@ p
 .text {
     text-align: left;
     padding-left: 0.5%;
-    border-left: 1% solid blue;
+    border-left: 2px solid rgb(25, 25, 168);
     display: flex;
 }
 input {
@@ -135,14 +135,14 @@ input {
 }
 .card-button {
     
-    height: auto;
+    height:10%;
     width: 100%;
     background-color: rgb(42, 65, 165);
     font-size: 1.2vw;
     color: white;
     border: 0px;    
     outline: none;
-      
+          
 }
 
 .card-button:hover {
