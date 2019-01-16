@@ -74,7 +74,7 @@ function Spruce(name, description, species, age, cones_size) {
   }
 }
 function showInfo(){
-  alert("Created");
+  alert("Hello!");
 }
 
 
