@@ -1,6 +1,6 @@
 function loadXMLRequest() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts', false);
+    xhr.open('GET', 'https://github.com/viktoria-germanovich/MyFirstProject/blob/master/Homework-6/json.json', false);
     xhr.send();
     if (xhr.status != 200) {
         alert(xhr.status + ': ' + xhr.statusText);
