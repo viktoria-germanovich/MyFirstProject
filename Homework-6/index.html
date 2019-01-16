@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,34 @@
     <link href="styles.css" rel="stylesheet">
     <title>Homework-6</title>
 </head>
+
 <body>
-    <button type="button" onclick="loadXMLRequest()">Get request</button>
-<br><br>
-<div id=main></div>
+    <div class="wrapper">
+        <button type="button" id="get" onclick="getRequest()">Get request</button>
+        <button type="button" id="post" onclick="postRequest()">Post request</button>
+        <br>
+        <br>
+
+        <form>
+            <label>User ID</label>
+            <input type="number" id="userID">
+            <br>
+            
+            <label>Title</label>
+            <input type="text" id="title">
+            <br>
+
+            <label>Body</label>
+            <input type="text" id="body">
+            <br>
+
+
+        </form>
+
+    </div>
+    <br>
+    <br>
+    <div id=main></div>
 </body>
+
 </html>

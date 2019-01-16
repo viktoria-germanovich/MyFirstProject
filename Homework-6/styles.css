@@ -1,7 +1,28 @@
+
+
 table,th,td {
     border : 1px solid black;
     border-collapse: collapse;
+    text-align: center;
+    
   }
-  th,td {
-    padding: 5px;
+  
+   .wrapper
+  {
+    width: 20%;
+      margin: auto;
+      text-align: right;
   }
+input{
+    margin:2%;
+}
+button{
+  color: #fff;
+  text-decoration: none;
+  user-select: none; 
+  background: rgb(29, 93, 167); 
+  padding: .7em 1.5em;
+  outline: none; 
+} 
+button:hover { background: rgb(106, 110, 109); } 
+button:active { background: rgb(84, 64, 155); } 
