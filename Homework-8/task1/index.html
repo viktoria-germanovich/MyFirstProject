@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="styles.css" rel="stylesheet">
     <script defer type="text/javascript" src="script.js"></script>
     <title>Homework-8</title>
 </head>
+
 <body>
-    
+    <div class="wrapper">
+        <button id="count" onclick="countRequest()">Count</button>
+        <button id="expand" onclick="expandRequest()">Expand</button>
+        <button id="top" onclick="topRequest()">Top</button>
+        <button id="orderby" onclick="orderbyRequest()">Order By</button>
+        <button id="scip" onclick="skipRequest()">Scip</button>
+        <button id="search" onclick="searchRequest()">Search</button>
+        <button id="filter" onclick="filterRequest()">Filter</button>
+        <button id="select" onclick="selectRequest()">Select</button>
+    </div>
+
+    <div id=main></div>
 </body>
+
 </html>
