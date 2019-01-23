@@ -1,128 +1,143 @@
-// function expandRequest() {
-//     var xhr = new XMLHttpRequest();
-//     url = "https://services.odata.org/V4/TripPinServiceRW/People?$expand=Trips($filter=Name eq 'Trip in US')";
-//     xhr.open('GET', url, false);
-//     xhr.send();
-//     if (xhr.status != 200) {
-//         alert(xhr.status + ': ' + xhr.statusText);
-//     } else {
-//         var array = JSON.parse(xhr.responseText);
-//         var table = '<table>';
-//         table += '<th>Username</th><th>FirstName</th><th>LastName</th><th>Gender</th><th>Concurrency</th>';
-//         for (var i in array) {
-//             table += '<tr><td>' + array[i].username + '</td><td>' +  array[i].firstname + '</td><td>' +  array[i].lastname + '</td><td>' +  array[i].gender + '</td><td>' +  array[i].concurrency + '</td></tr>';
-
-//         }
-//         table += '</table>';
-//         document.getElementById('main').innerHTML = table;
-//     }
-// }
-
 function countRequest() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://services.odata.org/V4/TripPinServiceRW/People/$count', false);
-    xhr.send();
-    if (xhr.status != 200) {
-        alert(xhr.status + ': ' + xhr.statusText);
-    } else {
-        alert(xhr.responseText);
-
-    }
+    url = 'https://services.odata.org/V4/TripPinServiceRW/People/$count'
+    $.get(url, function (data) {
+        alert("Total number of records:" + data);
+    }).fail(function () {
+        alert("Fail!");
+    });;
 }
-
 
 function expandRequest() {
-    var xhr = new XMLHttpRequest();
-    url="https://services.odata.org/V4/TripPinServiceRW/People?$expand=Trips($filter=Name eq 'Trip in US')"
-    xhr.open('GET',url, false);
-    xhr.send();
-    if (xhr.status != 200) {
-        alert(xhr.status + ': ' + xhr.statusText);
-    } else {
-        document.getElementById('main').innerHTML = xhr.responseText;
-
-    }
+    $.get("https://services.odata.org/V4/TripPinServiceRW/People?$expand=Trips", function (data) {
+        console.log(data);
+        alert('This request returns People and all their trips.Go to console to see it.');
+        showTable(data.value);
+    }).fail(function () {
+        alert("Fail!");
+    });;
 }
 
-function topRequest() {
-    var xhr = new XMLHttpRequest();
-    url="https://services.odata.org/V4/TripPinServiceRW/People?$top=2"
-    xhr.open('GET',url, false);
-    xhr.send();
-    if (xhr.status != 200) {
-        alert(xhr.status + ': ' + xhr.statusText);
-    } else {
-        document.getElementById('main').innerHTML = xhr.responseText;
 
-    }
+
+function topRequest() {
+    url = "https://services.odata.org/V4/TripPinServiceRW/People?$top=2";
+    $.get(url, function (data) {
+        console.log(data);
+        alert("First 2 records:");
+        showTable(data.value);
+    }).fail(function () {
+        alert("Fail!");
+    });;
+
 }
 
 
 function orderbyRequest() {
-    var xhr = new XMLHttpRequest();
-    url="https://services.odata.org/V4/TripPinServiceRW/People('scottketchum')/Trips?$orderby=EndsAt desc"
-    xhr.open('GET',url, false);
-    xhr.send();
-    if (xhr.status != 200) {
-        alert(xhr.status + ': ' + xhr.statusText);
-    } else {
-        document.getElementById('main').innerHTML = xhr.responseText;
-
-    }
+    url = "https://services.odata.org/V4/TripPinServiceRW/People?$orderby=FirstName"
+    $.get(url, function (data) {
+        console.log(data);
+        alert("Order By FirstName:");
+        showTable(data.value);
+    }).fail(function () {
+        alert("Fail!");
+    });;
 }
 
 
 function skipRequest() {
-    var xhr = new XMLHttpRequest();
-    url="https://services.odata.org/V4/TripPinServiceRW/People?$skip=18 "
-    xhr.open('GET',url, false);
-    xhr.send();
-    if (xhr.status != 200) {
-        alert(xhr.status + ': ' + xhr.statusText);
-    } else {
-        document.getElementById('main').innerHTML = xhr.responseText;
-
-    }
+    url = "https://services.odata.org/V4/TripPinServiceRW/People?$skip=15 "
+    $.get(url, function (data) {
+        console.log(data);
+        alert('Scip of 15 records');
+        showTable(data.value);
+    }).fail(function () {
+        alert("Fail!");
+    });;
 }
 
 
 function searchRequest() {
-    var xhr = new XMLHttpRequest();
-    url="https://services.odata.org/V4/TripPinServiceRW/People?$search=Boise "
-    xhr.open('GET',url, false);
-    xhr.send();
-    if (xhr.status != 200) {
-        alert(xhr.status + ': ' + xhr.statusText);
-    } else {
-        document.getElementById('main').innerHTML = xhr.responseText;
-
-    }
+    url = "https://services.odata.org/V4/TripPinServiceRW/People?$search=Boise "
+    $.get(url, function (data) {
+        console.log(data);
+        alert('Search record with City Name:Boise. Go to console to see it.');
+        showTable(data.value);
+    }).fail(function () {
+        alert("Fail!");
+    });;
 }
 
 
 function filterRequest() {
-    var xhr = new XMLHttpRequest();
-    url="https://services.odata.org/V4/TripPinServiceRW/People?$filter=FirstName eq 'Scott'"
-    xhr.open('GET',url, false);
-    xhr.send();
-    if (xhr.status != 200) {
-        alert(xhr.status + ': ' + xhr.statusText);
-    } else {
-        document.getElementById('main').innerHTML = xhr.responseText;
-
-    }
+    url = "https://services.odata.org/V4/TripPinServiceRW/People?$filter=FirstName eq 'Scott'"
+    $.get(url, function (data) {
+        console.log(data);
+        alert('Filter with First Name :Scott');
+        showTable(data.value);
+    }).fail(function () {
+        alert("Fail!");
+    });;
+}
+function combFilterRequest() {
+    url="https://services.odata.org/V4/TripPinServiceRW/People?$filter=startswith(FirstName,'" + 'R' + "') or startswith(FirstName,'" + 'C' + "') or startswith(FirstName,'" + 'K' + "')"
+        $.get(url, function (data) {
+            console.log(data);
+            alert('Request with FirstName first letters:R,C,K.');
+            showTable(data.value);
+        }).fail(function () {
+            alert("Fail!");
+        });;
 }
 
 
-function selectRequest() {
-    var xhr = new XMLHttpRequest();
-    url="https://services.odata.org/V4/TripPinServiceRW/Airports?$select=Name, IcaoCode"
-    xhr.open('GET',url, false);
-    xhr.send();
-    if (xhr.status != 200) {
-        alert(xhr.status + ': ' + xhr.statusText);
-    } else {
-        document.getElementById('main').innerHTML = xhr.responseText;
+function combStringRequest() {
+    $.get("https://services.odata.org/V4/TripPinServiceRW/People?$select=FirstName&$top=7&$orderby=FirstName desc", function (data) {
+        console.log(data);
+        showTable(data.value, 'NAME_ONLY');
+        alert('Select:FirstName   Top:7   Order By FirstName desc');
+    }).fail(function () {
+        alert("Fail!");
+    });;
+}
 
+function selectRequest() {
+    url = "https://services.odata.org/V4/TripPinServiceRW/People?$select=FirstName"
+    $.get(url, function (data) {
+        console.log(data);
+        alert('Select FirstName:');
+        showTable(data.value, 'NAME_ONLY');
+    }).fail(function () {
+        alert("Fail!");
+    });;
+}
+
+function showTable(data, mode) {
+    var myHTMLStr = '<table>';
+    if (mode == 'NAME_ONLY') {
+        myHTMLStr += '<th>FirstName</th>';
+        if (Array.isArray(data)) {
+            for (var i in data) {
+                myHTMLStr += '<tr><td>' + data[i]['FirstName'] + '</td></tr>';
+            }
+        } else {
+            myHTMLStr += '<tr><td>' + data.FirstName + '</td></tr>';
+        }
+    } else {
+        myHTMLStr += '<th>FirstName</th><th>Gender</th><th>LastName</th><th>UserName</th>';
+        if (Array.isArray(data)) {
+            for (var i in data) {
+                myHTMLStr += '<tr><td>' + data[i]['FirstName'] + '</td><td>' +
+                    data[i]['Gender'] + '</td><td>' +
+                    data[i]['LastName'] + '</td><td>' +
+                    data[i]['UserName'] + '</td></tr>';
+            }
+        } else {
+            myHTMLStr += '<tr><td>' + data.FirstName + '</td><td>' +
+                data.Gender + '</td><td>' +
+                data.LastName + '</td><td>' +
+                data.UserName + '</td></tr>';
+        }
     }
+    myHTMLStr += '</table>';
+    document.getElementById('main').innerHTML = myHTMLStr;
 }

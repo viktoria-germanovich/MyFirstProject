@@ -1,27 +1,9 @@
 {
-    "@odata.context": "http://services.odata.org/V4/(S(4vg4qaxh2p4pulvhoj3xfkug))/TripPinServiceRW/$metadata#People",
+    "@odata.context": "http://services.odata.org/V4/(S(mts3pwrwpggalgua530ddt2l))/TripPinServiceRW/$metadata#People",
     "value": [{
-        "@odata.id": "http://services.odata.org/V4/(S(4vg4qaxh2p4pulvhoj3xfkug))/TripPinServiceRW/People('russellwhyte')",
-        "@odata.etag": "W/\"08D680603B0FB975\"",
-        "@odata.editLink": "http://services.odata.org/V4/(S(4vg4qaxh2p4pulvhoj3xfkug))/TripPinServiceRW/People('russellwhyte')",
-        "UserName": "russellwhyte",
-        "FirstName": "Russell",
-        "LastName": "Whyte",
-        "Emails": ["Russell@example.com", "Russell@contoso.com"],
-        "AddressInfo": [{
-            "Address": "187 Suffolk Ln.",
-            "City": {
-                "CountryRegion": "United States",
-                "Name": "Boise",
-                "Region": "ID"
-            }
-        }],
-        "Gender": "Male",
-        "Concurrency": 636837548115605877
-    }, {
-        "@odata.id": "http://services.odata.org/V4/(S(4vg4qaxh2p4pulvhoj3xfkug))/TripPinServiceRW/People('scottketchum')",
-        "@odata.etag": "W/\"08D680603B0FB975\"",
-        "@odata.editLink": "http://services.odata.org/V4/(S(4vg4qaxh2p4pulvhoj3xfkug))/TripPinServiceRW/People('scottketchum')",
+        "@odata.id": "http://services.odata.org/V4/(S(mts3pwrwpggalgua530ddt2l))/TripPinServiceRW/People('scottketchum')",
+        "@odata.etag": "W/\"08D6811869CE7F60\"",
+        "@odata.editLink": "http://services.odata.org/V4/(S(mts3pwrwpggalgua530ddt2l))/TripPinServiceRW/People('scottketchum')",
         "UserName": "scottketchum",
         "FirstName": "Scott",
         "LastName": "Ketchum",
@@ -35,6 +17,6 @@
             }
         }],
         "Gender": "Male",
-        "Concurrency": 636837548115605877
+        "Concurrency": 636838339173842784
     }]
 }
