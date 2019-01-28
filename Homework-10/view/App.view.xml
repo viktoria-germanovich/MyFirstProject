@@ -21,7 +21,7 @@
 					id="item"
                     type = "Active"
                     title = "{People>FirstName} {People>LastName}"
-                    number = "UserName: {People>UserName}  |  Gender: {People>Gender}"
+                    number = "UserName: {People>UserName}"
                     press = ".goToDetails">
 				</ObjectListItem>
             </List>
@@ -30,3 +30,4 @@
         </App>  
     </Shell>        
 </mvc:View>
+ 
